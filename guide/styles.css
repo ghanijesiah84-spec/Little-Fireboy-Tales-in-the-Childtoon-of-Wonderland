@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+/* ===== COVER PAGE ===== */
+.cover-page {
+  width: 210mm;
+  min-height: 297mm;
+  background: linear-gradient(160deg, #ff4500 0%, #ff7f00 30%, #ffd700 60%, #ff6347 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  page-break-after: always;
+  position: relative;
+  overflow: hidden;
+  padding: 20mm;
+}
+
+.cover-page::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: -80px;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+.cover-page::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -60px;
+  width: 400px; height: 400px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+
+.cover-flames {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.flame-icon {
+  font-size: 48px;
+  animation: none;
+}
+
+.cover-studio-badge {
+  background: rgba(255,255,255,0.18);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 30px;
+  padding: 6px 22px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.cover-main-title {
+  font-family: 'Fredoka One', 'Arial Rounded MT Bold', Arial, sans-serif;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.1;
+  text-shadow: 3px 4px 0px rgba(180,60,0,0.5);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.cover-main-title span {
+  color: #ffe066;
+  display: block;
+  font-size: 38px;
+}
+
+.cover-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.92);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.cover-tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+.cover-divider {
+  width: 120px;
+  height: 4px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 2px;
+  margin: 16px auto;
+}
+
+.cover-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+  margin-top: 18px;
+}
+
+.cover-info-box {
+  background: rgba(255,255,255,0.18);
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.cover-info-box .label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 700;
+}
+
+.cover-info-box .value {
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.cover-creator {
+  margin-top: 28px;
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cover-creator strong {
+  color: #ffe066;
+  font-size: 15px;
+  display: block;
+}
+
+/* ===== GENERAL PAGE ===== */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 14mm 14mm 12mm 14mm;
+  page-break-after: always;
+  position: relative;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ff4500;
+}
+
+.page-header-icon {
+  font-size: 26px;
+}
+
+.page-header h2 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 22px;
+  color: #ff4500;
+  letter-spacing: 0.5px;
+}
+
+.page-header .sub {
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* ===== SECTION TITLE PAGE ===== */
+.section-title-page {
+  width: 210mm;
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  page-break-after: always;
+  text-align: center;
+  padding: 20mm;
+}
+
+.section-title-page.blue {
+  background: linear-gradient(135deg, #1a6be0 0%, #00b4d8 100%);
+}
+.section-title-page.orange {
+  background: linear-gradient(135deg, #ff4500 0%, #ffd700 100%);
+}
+.section-title-page.purple {
+  background: linear-gradient(135deg, #7b2ff7 0%, #f107a3 100%);
+}
+.section-title-page.green {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+.section-title-page.dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+}
+
+.section-number {
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.12);
+  line-height: 1;
+  margin-bottom: -20px;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+
+.section-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.section-title-page h1 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 42px;
+  color: #fff;
+  text-shadow: 2px 3px 0 rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.section-title-page p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  max-width: 320px;
+}
+
+/* ===== SHOW OVERVIEW ===== */
+.show-overview-box {
+  background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 100%);
+  border: 2px solid #ff4500;
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+}
+
+.show-overview-box h3 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 18px;
+  color: #ff4500;
+  margin-bottom: 8px;
+}
+
+.show-overview-box p {
+  font-size: 11.5px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.info-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.badge {
+  background: #ff4500;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.badge.blue { background: #1a6be0; }
+.badge.gold { background: #e8a000; }
+.badge.purple { background: #7b2ff7; }
+.badge.green { background: #11998e; }
+.badge.dark { background: #333; }
+
+/* ===== CHARACTER GRID ===== */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.character-card {
+  background: #f8f8ff;
+  border-radius: 12px;
+  padding: 10px 8px;
+  text-align: center;
+  border: 1.5px solid #e0e0e0;
+  transition: none;
+}
+
+.character-card .char-emoji {
+  font-size: 28px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.character-card .char-name {
+  font-size: 10px;
+  font-weight: 800;
+  color: #333;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.character-card .char-type {
+  font-size: 9px;
+  color: #888;
+  display: block;
+}
+
+.character-card.main { border-color: #ff4500; background: #fff8f5; }
+.character-card.support { border-color: #1a6be0; background: #f5f8ff; }
+.character-card.guest { border-color: #11998e; background: #f5fffc; }
+
+/* ===== EPISODE GUIDE ===== */
+.season-header {
+  background: linear-gradient(90deg, #ff4500, #ffd700);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.season-header .s-icon { font-size: 24px; }
+.season-header .s-title {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 20px;
+}
+.season-header .s-count {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.episode-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5px;
+}
+
+.episode-table thead tr {
+  background: #ff4500;
+  color: #fff;
+}
+
+.episode-table thead th {
+  padding: 7px 8px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.episode-table tbody tr:nth-child(even) {
+  background: #fff8f5;
+}
+
+.episode-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.episode-table tbody td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0e8e0;
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+.ep-num {
+  font-weight: 900;
+  color: #ff4500;
+  white-space: nowrap;
+}
+
+.ep-title {
+  font-weight: 700;
+  color: #222;
+}
+
+.ep-desc {
+  color: #555;
+  font-size: 10px;
+}
+
+.ep-airdate {
+  color: #888;
+  font-size: 9.5px;
+  white-space: nowrap;
+}
+
+.ep-guests {
+  color: #7b2ff7;
+  font-size: 9.5px;
+}
+
+/* ===== SOUNDTRACK ===== */
+.cd-cover-box {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  color: #fff;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.cd-art {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle at 35% 35%, #ffd700, #ff4500, #1a1a2e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 0 20px rgba(255,165,0,0.4);
+}
+
+.cd-art::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #1a1a2e;
+  border-radius: 50%;
+}
+
+.cd-info h3 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 20px;
+  color: #ffd700;
+  margin-bottom: 4px;
+}
+
+.cd-info p {
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+
+.track-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5px;
+}
+
+.track-table thead tr {
+  background: #1a1a2e;
+  color: #ffd700;
+}
+
+.track-table thead th {
+  padding: 7px 8px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.track-table tbody tr:nth-child(even) {
+  background: #f5f5ff;
+}
+
+.track-table tbody td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #e8e8f0;
+  vertical-align: middle;
+}
+
+.track-num {
+  font-weight: 900;
+  color: #7b2ff7;
+  width: 30px;
+}
+
+.track-title {
+  font-weight: 700;
+  color: #222;
+}
+
+.track-artist {
+  color: #1a6be0;
+  font-size: 10px;
+}
+
+.track-time {
+  color: #888;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.track-desc {
+  color: #555;
+  font-size: 9.5px;
+}
+
+/* ===== MOVIE SECTION ===== */
+.movie-banner {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a0000 50%, #2d0000 100%);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 16px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-banner::before {
+  content: '🎬';
+  position: absolute;
+  font-size: 120px;
+  right: -10px;
+  top: -10px;
+  opacity: 0.08;
+}
+
+.movie-banner h2 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 28px;
+  color: #ffd700;
+  text-shadow: 2px 2px 0 rgba(255,69,0,0.5);
+  margin-bottom: 6px;
+}
+
+.movie-banner .tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.movie-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.movie-stat {
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+}
+
+.movie-stat span {
+  color: #ffd700;
+  display: block;
+  font-size: 13px;
+}
+
+/* ===== DVD/VHS GUIDE ===== */
+.dvd-box {
+  background: linear-gradient(135deg, #2c2c54 0%, #474787 100%);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  color: #fff;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.dvd-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.dvd-info h4 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 15px;
+  color: #ffd700;
+  margin-bottom: 4px;
+}
+
+.dvd-info p {
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+}
+
+.dvd-info .episodes-list {
+  font-size: 10px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 4px;
+}
+
+/* ===== BACK COVER ===== */
+.back-cover {
+  width: 210mm;
+  min-height: 297mm;
+  background: linear-gradient(160deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20mm;
+  color: #fff;
+  page-break-after: always;
+}
+
+.back-cover h2 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 30px;
+  color: #ffd700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.back-cover p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  max-width: 380px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.barcode-box {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.barcode-lines {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.barcode-lines span {
+  display: block;
+  height: 40px;
+  background: #fff;
+}
+
+.rating-box {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 12px 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.rating-box .rating {
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffd700;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+
+.rating-box .rating-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===== UTILITY ===== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.info-card {
+  background: #f8f8ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border-left: 4px solid #ff4500;
+}
+
+.info-card.blue { border-left-color: #1a6be0; }
+.info-card.purple { border-left-color: #7b2ff7; }
+.info-card.green { border-left-color: #11998e; }
+.info-card.gold { border-left-color: #e8a000; }
+
+.info-card h4 {
+  font-size: 12px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-card p, .info-card li {
+  font-size: 10.5px;
+  color: #555;
+  line-height: 1.65;
+}
+
+.info-card ul {
+  padding-left: 14px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 900;
+  color: #ff4500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 14px 0 6px 0;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 8mm;
+  left: 14mm;
+  right: 14mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  color: #bbb;
+  border-top: 1px solid #eee;
+  padding-top: 4px;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, #fff8f0, #fff3e0);
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 10px 0;
+}
+
+.highlight-box h4 {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  font-size: 15px;
+  color: #e8a000;
+  margin-bottom: 5px;
+}
+
+.highlight-box p {
+  font-size: 10.5px;
+  color: #444;
+  line-height: 1.65;
+}
