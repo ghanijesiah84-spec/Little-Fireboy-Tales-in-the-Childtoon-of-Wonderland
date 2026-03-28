@@ -42,4 +42,9 @@ Each episode is approximately 11 minutes long, featuring a clear beginning, midd
 
 ## Music and Soundtrack
 
-The series features an original soundtrack with a diverse range of musical styles, reflecting the playful and adventurous nature of the show. The music is integral to the storytelling, enhancing mood, pacing, and character moments. The full soundtrack will comprise 300 MP3 audio tracks, designed to be both memorable and evocative of the 2000s cartoon era.
+The series features an original soundtrack with a diverse range of musical styles, reflecting the playful and adventurous nature of the show. The music is integral to the storytelling, enhancing mood, pacing, and character moments.
+
+### Opening Theme: "Spark of Wonder"
+A high-energy 2000s pop-punk track that introduces the main duo, Fireboy and Watergirl, and their quest through the Childtoon of Wonderland.
+
+The full soundtrack will comprise 300 MP3 audio tracks, designed to be both memorable and evocative of the 2000s cartoon era.
